@@ -1,0 +1,40 @@
+# Core Streamlit and Web Framework
+streamlit==1.28.0
+pandas==2.0.3
+numpy==1.24.3
+
+# Database
+sqlalchemy==2.0.19
+# sqlite3 is built into Python (no need to install)
+
+# Authentication and Security
+bcrypt==4.0.1
+python-dotenv==1.0.0
+
+# API Integrations
+requests==2.31.0
+spotipy==2.22.1
+
+# Machine Learning and NLP
+transformers==4.33.2
+torch==2.0.1
+# Optional: tensorflow==2.13.0 (if you want TensorFlow instead of PyTorch)
+
+# Audio Processing
+librosa==0.10.1
+soundfile==0.12.1
+SpeechRecognition==3.10.0
+
+# Audio Recording (WebRTC option - recommended)
+streamlit-webrtc==0.47.1
+opencv-python==4.8.1.78
+av==10.0.0
+
+# Visualization and Charts
+plotly==5.15.0
+
+# UI Components
+streamlit-option-menu==0.3.6
+
+# Image Processing
+Pillow==10.0.0
