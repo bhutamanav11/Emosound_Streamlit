@@ -17,6 +17,15 @@ def render_login_page():
         </p>
     </div>
     """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
+                padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
+        <h1 style="color: white; margin: 0; font-size: 2.5rem; font-weight: 300;">🎵 EmoSound</h1>
+        <p style="color: rgba(255, 255, 255, 0.8); margin: 0.5rem 0 0 0; font-size: 1.1rem;">
+            AI-Powered Music Discovery Based on Your Emotions
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
     tab1, tab2 = st.tabs(["Login", "Register"])
     
@@ -311,6 +320,44 @@ def render_profile_page():
 
 def render_playlists_page():
     """Render playlists page"""
+    st.markdown("""
+    <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
+                padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
+        <h1 style="color: white; margin: 0; font-size: 2.5rem; font-weight: 300;">🎵 Playlists</h1>
+        <p style="color: rgba(255, 255, 255, 0.8); margin: 0.5rem 0 0 0; font-size: 1.1rem;">
+            Emotion-Based Music Collections
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.subheader("🎵 Emotion-Based Playlists")
+    
+    # Define emotions with colors and emojis
+    emotions = [
+        ('happy', '#FFD700', '😊'),
+        ('sad', '#4169E1', '😢'),
+        ('angry', '#FF4500', '😠'),
+        ('excited', '#FF69B4', '🎉'),
+        ('calm', '#98FB98', '😌'),
+        ('anxious', '#DDA0DD', '😰'),
+        ('romantic', '#FF1493', '💕'),
+        ('energetic', '#FF8C00', '⚡'),
+        ('melancholic', '#708090', '🌧️'),
+        ('confident', '#DC143C', '💪')
+    ]
+    
+    for emotion, color, emoji in emotions:
+        with st.expander(f"{emoji} {emotion.title()} Playlist"):
+            st.markdown(f"""
+            <div style="background: {color}20; padding: 1rem; border-radius: 10px; 
+                        border-left: 4px solid {color}; margin: 1rem 0;">
+                <h4 style="color: {color};">{emoji} {emotion.title()} Vibes</h4>
+                <p>Songs that match your {emotion} mood</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Get sample songs for this emotion
+            songs = get_sample_songs_for_emotion(emotion)
     st.markdown("""
     <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
                 padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
