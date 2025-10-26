@@ -1,0 +1,540 @@
+2025-09-27 11:21:24,277 - database.init_db - INFO - Database tables created successfully
+2025-09-27 11:21:24,305 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 11:21:24,320 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 11:21:24,320 - database.init_db - INFO - Database initialization completed
+2025-09-27 11:21:24,320 - ui.pages - INFO - Database initialized successfully
+2025-09-27 11:22:04,851 - auth.authentication - ERROR - Registration error: 'DatabaseManager' object has no attribute 'User'
+2025-09-27 11:22:42,693 - auth.authentication - ERROR - Registration error: 'DatabaseManager' object has no attribute 'User'
+2025-09-27 11:22:44,994 - auth.authentication - ERROR - Registration error: 'DatabaseManager' object has no attribute 'User'
+2025-09-27 11:23:03,076 - auth.authentication - ERROR - Registration error: 'DatabaseManager' object has no attribute 'User'
+2025-09-27 11:23:21,252 - database.init_db - INFO - Database tables created successfully
+2025-09-27 11:23:21,276 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 11:23:21,325 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 11:23:21,325 - database.init_db - INFO - Database initialization completed
+2025-09-27 11:23:21,325 - ui.pages - INFO - Database initialized successfully
+2025-09-27 11:23:21,345 - auth.authentication - ERROR - Registration error: 'DatabaseManager' object has no attribute 'User'
+2025-09-27 11:30:27,701 - auth.authentication - WARNING - Failed login attempt for: manav
+2025-09-27 11:30:33,095 - auth.authentication - WARNING - Failed login attempt for: manav
+2025-09-27 11:30:37,104 - auth.authentication - INFO - User registered: manav
+2025-09-27 11:30:43,313 - auth.authentication - INFO - User logged in: manav
+2025-09-27 11:32:29,823 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-09-27 11:33:43,293 - emotion.text_emotion - INFO - Text emotion model loaded successfully
+2025-09-27 11:34:21,873 - emotion.text_emotion - INFO - Detected emotion: happy (confidence: 0.98)
+2025-09-27 11:34:25,918 - api.spotify_api - INFO - Found 10 songs for emotion: happy
+2025-09-27 11:34:26,093 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_1'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 11:36:30,690 - database.init_db - INFO - Database tables created successfully
+2025-09-27 11:36:30,717 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 11:36:30,760 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 11:36:30,761 - database.init_db - INFO - Database initialization completed
+2025-09-27 11:36:30,762 - ui.pages - INFO - Database initialized successfully
+2025-09-27 11:37:16,656 - auth.authentication - INFO - User registered: aaryanlunis
+2025-09-27 11:37:38,010 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-09-27 11:39:14,584 - emotion.text_emotion - INFO - Detected emotion: angry (confidence: 0.99)
+2025-09-27 11:39:17,195 - api.spotify_api - INFO - Found 10 songs for emotion: angry
+2025-09-27 11:40:39,706 - emotion.text_emotion - INFO - Detected emotion: anxious (confidence: 0.96)
+2025-09-27 11:40:41,243 - api.spotify_api - INFO - Found 10 songs for emotion: anxious
+2025-09-27 11:47:04,434 - emotion.text_emotion - INFO - Detected emotion: sad (confidence: 0.99)
+2025-09-27 11:47:06,986 - api.spotify_api - INFO - Found 10 songs for emotion: sad
+2025-09-27 11:47:07,093 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_2'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 11:47:18,049 - database.init_db - INFO - Database tables created successfully
+2025-09-27 11:47:18,066 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 11:47:18,114 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 11:47:18,114 - database.init_db - INFO - Database initialization completed
+2025-09-27 11:47:18,114 - ui.pages - INFO - Database initialized successfully
+2025-09-27 11:47:35,188 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-09-27 11:47:44,801 - emotion.text_emotion - INFO - Detected emotion: anxious (confidence: 0.96)
+2025-09-27 11:47:47,063 - api.spotify_api - INFO - Found 10 songs for emotion: anxious
+2025-09-27 18:53:55,017 - database.init_db - INFO - Database tables created successfully
+2025-09-27 18:53:55,086 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 18:53:55,116 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 18:53:55,116 - database.init_db - INFO - Database initialization completed
+2025-09-27 18:53:55,117 - ui.pages - INFO - Database initialized successfully
+2025-09-27 18:54:43,666 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-09-27 18:56:24,412 - emotion.text_emotion - INFO - Text emotion model loaded successfully
+2025-09-27 18:58:24,226 - emotion.text_emotion - INFO - Detected emotion: sad (confidence: 0.92)
+2025-09-27 18:58:27,354 - api.spotify_api - INFO - Found 10 songs for emotion: sad
+2025-09-27 18:58:27,560 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_2'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 18:58:39,380 - database.init_db - INFO - Database tables created successfully
+2025-09-27 18:58:39,395 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 18:58:39,449 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 18:58:39,450 - database.init_db - INFO - Database initialization completed
+2025-09-27 18:58:39,451 - ui.pages - INFO - Database initialized successfully
+2025-09-27 18:58:52,327 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-09-27 18:58:57,095 - emotion.text_emotion - INFO - Detected emotion: sad (confidence: 0.92)
+2025-09-27 18:58:58,308 - api.spotify_api - INFO - Found 10 songs for emotion: sad
+2025-09-27 18:58:58,514 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_2'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 18:59:08,356 - emotion.text_emotion - INFO - Detected emotion: sad (confidence: 0.92)
+2025-09-27 18:59:10,671 - api.spotify_api - INFO - Found 10 songs for emotion: sad
+2025-09-27 18:59:10,789 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_2'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 18:59:17,927 - database.init_db - INFO - Database tables created successfully
+2025-09-27 18:59:17,961 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 18:59:18,022 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 18:59:18,031 - database.init_db - INFO - Database initialization completed
+2025-09-27 18:59:18,036 - ui.pages - INFO - Database initialized successfully
+2025-09-27 18:59:30,072 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-09-27 18:59:35,893 - emotion.text_emotion - INFO - Detected emotion: happy (confidence: 0.85)
+2025-09-27 18:59:37,321 - api.spotify_api - INFO - Found 10 songs for emotion: happy
+2025-09-27 18:59:37,523 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_2'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 19:00:37,592 - database.init_db - INFO - Database tables created successfully
+2025-09-27 19:00:37,666 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 19:00:37,741 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 19:00:37,743 - database.init_db - INFO - Database initialization completed
+2025-09-27 19:00:37,747 - ui.pages - INFO - Database initialized successfully
+2025-09-27 19:00:52,662 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-09-27 19:01:01,347 - emotion.text_emotion - INFO - Detected emotion: happy (confidence: 0.98)
+2025-09-27 19:01:02,505 - api.spotify_api - INFO - Found 10 songs for emotion: happy
+2025-09-27 19:01:02,604 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_2'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 19:02:35,475 - emotion.text_emotion - INFO - Detected emotion: sad (confidence: 0.92)
+2025-09-27 19:02:36,948 - api.spotify_api - INFO - Found 10 songs for emotion: sad
+2025-09-27 19:02:37,114 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_2'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 19:03:55,817 - database.init_db - INFO - Database tables created successfully
+2025-09-27 19:03:55,825 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 19:03:55,855 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 19:03:55,856 - database.init_db - INFO - Database initialization completed
+2025-09-27 19:03:55,857 - ui.pages - INFO - Database initialized successfully
+2025-09-27 19:04:13,678 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-09-27 19:04:17,784 - emotion.text_emotion - INFO - Detected emotion: sad (confidence: 0.98)
+2025-09-27 19:04:18,963 - api.spotify_api - INFO - Found 10 songs for emotion: sad
+2025-09-27 19:04:19,030 - ui.pages - ERROR - Application error: There are multiple widgets with the same `key='like_None_2'`.
+
+To fix this, please make sure that the `key` argument is unique for each
+widget you create.
+2025-09-27 19:12:43,435 - database.init_db - INFO - Database tables created successfully
+2025-09-27 19:12:43,469 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 19:12:43,489 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 19:12:43,489 - database.init_db - INFO - Database initialization completed
+2025-09-27 19:12:43,490 - ui.pages - INFO - Database initialized successfully
+2025-09-27 19:12:54,183 - database.init_db - INFO - Database tables created successfully
+2025-09-27 19:12:54,195 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 19:12:54,207 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 19:12:54,208 - database.init_db - INFO - Database initialization completed
+2025-09-27 19:12:54,209 - ui.pages - INFO - Database initialized successfully
+2025-09-27 19:13:31,113 - database.init_db - INFO - Database tables created successfully
+2025-09-27 19:13:31,121 - database.init_db - INFO - Default emotions added successfully
+2025-09-27 19:13:31,147 - database.init_db - INFO - Sample songs added successfully
+2025-09-27 19:13:31,148 - database.init_db - INFO - Database initialization completed
+2025-09-27 19:13:31,152 - ui.pages - INFO - Database initialized successfully
+2025-09-27 19:13:31,596 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-09-27 19:13:43,442 - ui.pages - ERROR - Application error: name 'render_profile_page' is not defined
+2025-09-27 19:13:44,960 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-09-27 19:13:54,567 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-09-27 19:14:25,977 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:28:40,054 - database.init_db - INFO - Database tables created successfully
+2025-10-01 20:28:40,069 - database.init_db - INFO - Default emotions added successfully
+2025-10-01 20:28:40,086 - database.init_db - INFO - Sample songs added successfully
+2025-10-01 20:28:40,087 - database.init_db - INFO - Database initialization completed
+2025-10-01 20:28:40,087 - ui.pages - INFO - Database initialized successfully
+2025-10-01 20:30:42,872 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-01 20:31:30,150 - ui.pages - ERROR - Application error: name 'render_profile_page' is not defined
+2025-10-01 20:31:42,448 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:32:50,671 - ui.pages - ERROR - Application error: name 'render_profile_page' is not defined
+2025-10-01 20:32:53,632 - database.init_db - INFO - Database tables created successfully
+2025-10-01 20:32:53,652 - database.init_db - INFO - Default emotions added successfully
+2025-10-01 20:32:53,684 - database.init_db - INFO - Sample songs added successfully
+2025-10-01 20:32:53,684 - database.init_db - INFO - Database initialization completed
+2025-10-01 20:32:53,685 - ui.pages - INFO - Database initialized successfully
+2025-10-01 20:33:02,919 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-01 20:33:04,458 - ui.pages - ERROR - Application error: name 'render_profile_page' is not defined
+2025-10-01 20:36:34,447 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:36:41,781 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:36:59,366 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:37:09,763 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:37:15,603 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:37:21,970 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:37:46,208 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:38:01,051 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:38:27,650 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-01 20:40:03,920 - auth.authentication - INFO - User logged out
+2025-10-01 20:47:51,031 - auth.authentication - WARNING - Failed login attempt for: Manav
+2025-10-01 20:47:58,860 - auth.authentication - WARNING - Failed login attempt for: Manav
+2025-10-01 20:47:59,938 - auth.authentication - WARNING - Failed login attempt for: Manav
+2025-10-01 20:48:03,799 - auth.authentication - WARNING - Failed login attempt for: Manav
+2025-10-01 20:48:09,119 - auth.authentication - WARNING - Failed login attempt for: Manav
+2025-10-01 20:48:32,795 - auth.authentication - INFO - User registered: Manav123
+2025-10-01 20:49:07,021 - auth.authentication - INFO - User logged in: Manav123
+2025-10-25 22:49:45,695 - database.init_db - INFO - Database tables created successfully
+2025-10-25 22:49:45,711 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 22:49:45,726 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 22:49:45,727 - database.init_db - INFO - Database initialization completed
+2025-10-25 22:49:45,728 - ui.pages - INFO - Database initialized successfully
+2025-10-25 22:50:29,386 - auth.authentication - WARNING - Failed login attempt for: bhutamanav@gmail.com
+2025-10-25 22:52:52,705 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-25 22:54:15,034 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-25 22:55:11,719 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-25 22:56:44,733 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-25 23:32:53,566 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:32:53,592 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:32:53,604 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:32:53,605 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:32:53,605 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:33:19,982 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-25 23:34:29,522 - api.spotify_api - INFO - Public Spotify client initialized successfully
+2025-10-25 23:34:29,523 - api.spotify_api - INFO - Generated auth URL with redirect: http://127.0.0.1:8501/callback
+2025-10-25 23:35:12,573 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:35:12,682 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:35:12,733 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:35:12,753 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:35:12,769 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:35:17,384 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:35:17,402 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:35:17,433 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:35:17,434 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:35:17,437 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:35:32,145 - auth.authentication - WARNING - Failed login attempt for: manavbhuta
+2025-10-25 23:35:40,719 - auth.authentication - WARNING - Failed login attempt for: manavbhuta
+2025-10-25 23:35:41,505 - auth.authentication - WARNING - Failed login attempt for: manavbhuta
+2025-10-25 23:36:06,457 - auth.authentication - WARNING - Failed login attempt for: bhutamanav@gmail.com
+2025-10-25 23:36:07,816 - auth.authentication - WARNING - Failed login attempt for: bhutamanav@gmail.com
+2025-10-25 23:36:08,251 - auth.authentication - WARNING - Failed login attempt for: bhutamanav@gmail.com
+2025-10-25 23:36:08,430 - auth.authentication - WARNING - Failed login attempt for: bhutamanav@gmail.com
+2025-10-25 23:36:08,583 - auth.authentication - WARNING - Failed login attempt for: bhutamanav@gmail.com
+2025-10-25 23:36:09,777 - auth.authentication - WARNING - Failed login attempt for: bhutamanav@gmail.com
+2025-10-25 23:36:39,173 - auth.authentication - WARNING - Failed login attempt for: Manav
+2025-10-25 23:36:41,858 - auth.authentication - WARNING - Failed login attempt for: Manav
+2025-10-25 23:36:46,394 - auth.authentication - WARNING - Failed login attempt for: manav
+2025-10-25 23:36:48,265 - auth.authentication - WARNING - Failed login attempt for: manav
+2025-10-25 23:36:48,576 - auth.authentication - WARNING - Failed login attempt for: manav
+2025-10-25 23:37:19,169 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:37:19,174 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:37:19,187 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:37:19,187 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:37:19,187 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:37:55,510 - auth.authentication - WARNING - Failed login attempt for: mbhuta
+2025-10-25 23:38:33,517 - auth.authentication - INFO - User registered: mbhuta
+2025-10-25 23:38:43,331 - auth.authentication - INFO - User logged in: mbhuta
+2025-10-25 23:38:54,598 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-25 23:38:54,629 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=sadness&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000208CBE91610>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-25 23:39:00,334 - api.spotify_api - INFO - Public Spotify client initialized successfully
+2025-10-25 23:39:00,334 - api.spotify_api - INFO - Generated auth URL with redirect: http://127.0.0.1:8501/callback
+2025-10-25 23:52:43,238 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:52:43,293 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:52:43,325 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:52:43,325 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:52:43,325 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:52:54,042 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:52:54,051 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:52:54,090 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:52:54,091 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:52:54,093 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:52:55,749 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:52:55,761 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:52:55,817 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:52:55,818 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:52:55,821 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:53:04,766 - auth.authentication - WARNING - Failed login attempt for: manavb
+2025-10-25 23:53:06,480 - auth.authentication - WARNING - Failed login attempt for: manavb
+2025-10-25 23:53:13,909 - auth.authentication - WARNING - Failed login attempt for: manavb
+2025-10-25 23:53:29,981 - auth.authentication - INFO - User logged in: mbhuta
+2025-10-25 23:53:52,132 - auth.authentication - INFO - User logged in: mbhuta
+2025-10-25 23:54:11,107 - api.spotify_api - INFO - Public Spotify client initialized
+2025-10-25 23:54:11,107 - api.spotify_api - INFO - Generated auth URL: https://accounts.spotify.com/authorize?client_id=your_actual_client_id_here&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8501%2Fcallback&scope=user-read-playback-state+user-modify-playback-state+user-read-currently-playing+streaming+user-read-private+user-read-email+user-library-read+playlist-read-private
+2025-10-25 23:54:27,129 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:54:27,144 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:54:27,163 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:54:27,164 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:54:27,167 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:54:39,358 - auth.authentication - INFO - User logged in: mbhuta
+2025-10-25 23:54:54,797 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-25 23:55:24,421 - database.init_db - INFO - Database tables created successfully
+2025-10-25 23:55:24,436 - database.init_db - INFO - Default emotions added successfully
+2025-10-25 23:55:24,473 - database.init_db - INFO - Sample songs added successfully
+2025-10-25 23:55:24,473 - database.init_db - INFO - Database initialization completed
+2025-10-25 23:55:24,475 - __main__ - INFO - Database initialized successfully
+2025-10-25 23:55:37,536 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-25 23:55:49,740 - api.spotify_api - INFO - Generated auth URL: https://accounts.spotify.com/authorize?client_id=your_actual_client_id_here&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8501%2Fcallback&scope=user-read-playback-state+user-modify-playback-state+user-read-currently-playing+streaming+user-read-private+user-read-email+user-library-read+playlist-read-private
+2025-10-25 23:56:02,006 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-25 23:56:02,066 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=sadness&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001EAAFC541D0>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:01:57,671 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:01:59,350 - database.init_db - INFO - Database tables created successfully
+2025-10-26 12:01:59,401 - database.init_db - INFO - Default emotions added successfully
+2025-10-26 12:01:59,417 - database.init_db - INFO - Sample songs added successfully
+2025-10-26 12:01:59,417 - database.init_db - INFO - Database initialization completed
+2025-10-26 12:02:09,123 - __main__ - ERROR - Application error: name 'emotion_data' is not defined
+2025-10-26 12:05:08,944 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:05:22,746 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:05:23,626 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-26 12:05:23,736 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:05:24,653 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:05:27,056 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:05:27,070 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:11:32,960 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:11:37,133 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:11:39,004 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:11:39,174 - api.spotify_api - INFO - Public Spotify client initialized
+2025-10-26 12:11:39,174 - api.spotify_api - INFO - Generated auth URL: https://accounts.spotify.com/authorize?client_id=your_actual_client_id_here&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8501&scope=user-read-playback-state+user-modify-playback-state+user-read-currently-playing+streaming+user-read-private+user-read-email+user-library-read+playlist-read-private
+2025-10-26 12:12:59,884 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:13:01,518 - database.init_db - INFO - Database tables created successfully
+2025-10-26 12:13:01,624 - database.init_db - INFO - Default emotions added successfully
+2025-10-26 12:13:01,673 - database.init_db - INFO - Sample songs added successfully
+2025-10-26 12:13:01,673 - database.init_db - INFO - Database initialization completed
+2025-10-26 12:13:25,053 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:13:25,908 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-26 12:13:26,040 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:13:26,857 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:13:31,526 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:13:34,335 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:13:34,508 - api.spotify_api - INFO - Public Spotify client initialized
+2025-10-26 12:13:34,508 - api.spotify_api - INFO - Generated auth URL: https://accounts.spotify.com/authorize?client_id=c176f0f2e38f444eb24f4f63dfa980fc&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8501&scope=user-read-playback-state+user-modify-playback-state+user-read-currently-playing+streaming+user-read-private+user-read-email+user-library-read+playlist-read-private
+2025-10-26 12:13:45,556 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:13:46,187 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:13:46,201 - database.init_db - INFO - Database tables created successfully
+2025-10-26 12:13:46,226 - database.init_db - INFO - Default emotions added successfully
+2025-10-26 12:13:46,274 - database.init_db - INFO - Sample songs added successfully
+2025-10-26 12:13:46,277 - database.init_db - INFO - Database initialization completed
+2025-10-26 12:14:05,613 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:06,432 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-26 12:14:06,556 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:06,571 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:14:10,465 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:10,607 - ui.pages - ERROR - Error fetching Spotify playlists: 'SpotifyManager' object has no attribute 'get_user_playlists'
+2025-10-26 12:14:15,056 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:15,766 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:14:28,664 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:29,163 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:14:34,468 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:35,006 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:14:40,430 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:40,439 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:14:47,290 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:47,298 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:14:47,467 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:53,997 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:55,293 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:14:55,885 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:15:15,679 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:15:15,702 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:15:23,178 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:15:23,861 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:15:27,714 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:15:27,715 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:15:33,959 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:15:34,127 - ui.pages - ERROR - Error fetching Spotify playlists: 'SpotifyManager' object has no attribute 'get_user_playlists'
+2025-10-26 12:15:34,402 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:15:45,469 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:15:45,812 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:15:51,186 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:15:51,206 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:15:59,163 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:00,003 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:16:01,452 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:01,838 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:16:03,051 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:03,328 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:03,744 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:16:04,649 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:05,221 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:16:09,952 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:10,210 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:10,556 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:16:12,315 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:12,592 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:16:16,705 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:16:16,714 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:19:35,309 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:19:35,923 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:19:37,559 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:19:37,715 - ui.pages - ERROR - Error fetching Spotify playlists: 'SpotifyManager' object has no attribute 'get_user_playlists'
+2025-10-26 12:19:39,338 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:19:42,574 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:19:42,829 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:19:47,214 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:19:47,228 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:23:34,587 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:23:34,593 - database.init_db - INFO - Database tables created successfully
+2025-10-26 12:23:34,604 - database.init_db - INFO - Default emotions added successfully
+2025-10-26 12:23:34,622 - database.init_db - INFO - Sample songs added successfully
+2025-10-26 12:23:34,632 - database.init_db - INFO - Database initialization completed
+2025-10-26 12:23:44,230 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:23:44,565 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-26 12:23:44,688 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:23:44,694 - __main__ - ERROR - Application error: 'NoneType' object is not subscriptable
+2025-10-26 12:29:42,278 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:29:52,286 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:29:52,379 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:29:52,408 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:29:52,770 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=sadness&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9AA168690>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:29:52,793 - api.spotify_api - INFO - Public Spotify client initialized
+2025-10-26 12:29:52,795 - __main__ - ERROR - Application error: 'SpotifyManager' object has no attribute 'search_tracks_by_emotion'
+2025-10-26 12:29:53,174 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:30:01,192 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:30:01,209 - database.init_db - INFO - Database tables created successfully
+2025-10-26 12:30:01,233 - database.init_db - INFO - Default emotions added successfully
+2025-10-26 12:30:01,274 - database.init_db - INFO - Sample songs added successfully
+2025-10-26 12:30:01,275 - database.init_db - INFO - Database initialization completed
+2025-10-26 12:30:26,401 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:30:27,231 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-26 12:30:27,496 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:30:29,762 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:30:30,218 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:30:36,516 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:30:36,670 - ui.pages - ERROR - Error fetching Spotify playlists: 'SpotifyManager' object has no attribute 'get_user_playlists'
+2025-10-26 12:30:36,976 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:30:47,186 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:30:47,517 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:30:49,781 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:30:49,941 - ui.pages - ERROR - Error fetching Spotify playlists: 'SpotifyManager' object has no attribute 'get_user_playlists'
+2025-10-26 12:30:50,180 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:31:00,142 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:31:00,421 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:31:06,027 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:31:06,357 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:31:08,491 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:31:09,027 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:31:11,472 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:31:11,797 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:31:20,898 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:31:21,124 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:31:21,377 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:31:21,388 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:31:21,418 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=sadness&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9FF38D250>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:31:21,423 - __main__ - ERROR - Application error: 'SpotifyManager' object has no attribute 'search_tracks_by_emotion'
+2025-10-26 12:45:48,319 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:45:48,838 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:45:57,311 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:45:57,660 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:46:00,233 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:46:00,524 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:46:12,054 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:46:12,078 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:46:12,146 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=sadness&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9FF3C0950>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:46:13,423 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:46:44,617 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:46:44,791 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:46:44,803 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:46:44,820 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=inspirational&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9FF28BF90>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:46:44,949 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:46:46,087 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:47:09,699 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:47:10,168 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:47:13,133 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:47:13,643 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/playlists with Params: {'limit': 50, 'offset': 0} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:47:14,011 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:47:21,533 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:47:21,834 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:47:29,254 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:47:29,550 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:47:36,865 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:47:36,876 - database.init_db - INFO - Database tables created successfully
+2025-10-26 12:47:36,904 - database.init_db - INFO - Default emotions added successfully
+2025-10-26 12:47:36,956 - database.init_db - INFO - Sample songs added successfully
+2025-10-26 12:47:36,956 - database.init_db - INFO - Database initialization completed
+2025-10-26 12:47:54,233 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:47:55,081 - auth.authentication - INFO - User logged in: aaryanlunis
+2025-10-26 12:47:55,329 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:48:37,008 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:48:37,047 - __main__ - ERROR - Application error: invalid syntax (pages.py, line 213)
+2025-10-26 12:48:58,881 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:48:59,207 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:08,457 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:49:08,730 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:12,980 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:49:13,088 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:49:13,106 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:49:13,190 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=sadness&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9FF356150>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:49:13,207 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:14,202 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:21,510 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:49:21,739 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:32,622 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:49:32,750 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:49:32,761 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:49:32,803 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=happiness&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B98FFF10D0>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:49:32,847 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:34,054 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:43,230 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:49:43,615 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/playlists with Params: {'limit': 50, 'offset': 0} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:43,924 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:49:51,404 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:49:51,650 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:50:01,908 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:50:02,021 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:50:02,039 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:50:02,057 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=love&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9AA23FF90>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:50:02,140 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:50:03,233 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:50:13,202 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:50:13,457 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:50:17,006 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:50:17,218 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:52:01,457 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:52:01,464 - database.init_db - INFO - Database tables created successfully
+2025-10-26 12:52:01,481 - database.init_db - INFO - Default emotions added successfully
+2025-10-26 12:52:01,518 - database.init_db - INFO - Sample songs added successfully
+2025-10-26 12:52:01,518 - database.init_db - INFO - Database initialization completed
+2025-10-26 12:52:53,535 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:52:54,417 - auth.authentication - INFO - User registered: vaishali
+2025-10-26 12:53:30,261 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:53:31,110 - auth.authentication - INFO - User logged in: vaishali
+2025-10-26 12:53:31,345 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:53:42,388 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:53:42,675 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:53:42,933 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:53:44,184 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:53:44,205 - __main__ - INFO - Generated auth URL: https://accounts.spotify.com/authorize?client_id=c176f0f2e38f444eb24f4f63dfa980fc&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8501&scope=user-read-private+user-read-email+user-library-read+user-library-modify+user-read-playback-state+user-modify-playback-state+user-read-currently-playing+playlist-read-private+playlist-modify-public+playlist-modify-private+streaming
+2025-10-26 12:53:49,178 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:53:49,782 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:53:49,793 - database.init_db - INFO - Database tables created successfully
+2025-10-26 12:53:49,815 - database.init_db - INFO - Default emotions added successfully
+2025-10-26 12:53:49,857 - database.init_db - INFO - Sample songs added successfully
+2025-10-26 12:53:49,857 - database.init_db - INFO - Database initialization completed
+2025-10-26 12:54:19,644 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:20,414 - auth.authentication - INFO - User logged in: vaishali
+2025-10-26 12:54:20,636 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:20,892 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:54:25,786 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:26,184 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:54:28,639 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:28,950 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:54:31,286 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:31,715 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/playlists with Params: {'limit': 50, 'offset': 0} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:54:32,019 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:54:33,495 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:33,763 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:54:37,670 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:37,928 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:54:55,363 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:55,476 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:54:55,496 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:54:55,547 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=love&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9FF289FD0>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:54:55,617 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:54:56,643 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:55:09,860 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:55:09,962 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:55:09,968 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:55:10,012 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=courage&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9AA2F5050>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:55:10,088 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:55:10,972 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:55:28,044 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:55:28,140 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:55:28,156 - ui.components - WARNING - ML detection failed, using fallback: cannot import name 'ml_text_emotion_detector' from 'emotion.text_emotion' (C:\Users\bhuta\emosound_2nd_draft\emotion\text_emotion.py)
+2025-10-26 12:55:28,172 - api.quote_api - ERROR - Error fetching quote from API: HTTPSConnectionPool(host='api.quotegarden.io', port=443): Max retries exceeded with url: /api/v3/quotes?category=inspirational&count=1 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001B9FF3D8810>: Failed to resolve 'api.quotegarden.io' ([Errno 11001] getaddrinfo failed)"))
+2025-10-26 12:55:28,291 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:55:28,977 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:55:40,556 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:55:40,684 - __main__ - INFO - Spotify Config OK - Redirect: http://127.0.0.1:8501
+2025-10-26 12:55:40,785 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
+2025-10-26 12:55:41,213 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/me/ with Params: {} returned 403 due to Check settings on developer.spotify.com/dashboard, the user may not be registered.
