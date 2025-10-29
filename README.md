@@ -316,7 +316,7 @@ LOG_LEVEL=INFO
 
 1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)
 2. Create a new app
-3. Add `http://localhost:8501/callback` to Redirect URIs
+3. Add `http://127.0.0.1:8501` to Redirect URIs
 4. Copy Client ID and Client Secret to `.env` file
 
 ### 3. Generate Security Keys
