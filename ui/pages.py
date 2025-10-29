@@ -17,15 +17,15 @@ def render_login_page():
         </p>
     </div>
     """, unsafe_allow_html=True)
-    st.markdown("""
-    <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
-                padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
-        <h1 style="color: white; margin: 0; font-size: 2.5rem; font-weight: 300;">🎵 EmoSound</h1>
-        <p style="color: rgba(255, 255, 255, 0.8); margin: 0.5rem 0 0 0; font-size: 1.1rem;">
-            AI-Powered Music Discovery Based on Your Emotions
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    # st.markdown("""
+    # <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
+    #             padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
+    #     <h1 style="color: white; margin: 0; font-size: 2.5rem; font-weight: 300;">🎵 EmoSound</h1>
+    #     <p style="color: rgba(255, 255, 255, 0.8); margin: 0.5rem 0 0 0; font-size: 1.1rem;">
+    #         AI-Powered Music Discovery Based on Your Emotions
+    #     </p>
+    # </div>
+    # """, unsafe_allow_html=True)
     
     tab1, tab2 = st.tabs(["Login", "Register"])
     
@@ -70,7 +70,7 @@ def render_login_page():
                     st.error("Please fill in all fields")
 
 def render_home_page():
-    """Render main home page with emotion detection"""
+    """Render main home page with emotion detection - FIXED VERSION"""
     st.markdown("""
     <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
                 padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
@@ -80,151 +80,188 @@ def render_home_page():
         </p>
     </div>
     """, unsafe_allow_html=True)
-
+    
     current_user = auth_manager.get_current_user()
     if current_user:
         st.markdown(f"### Welcome back, {current_user.username}! 👋")
-
-    # Emotion detection
+    
+    # Emotion detection input
     emotion_data = render_input_section()
-
-    if emotion_data and emotion_data['emotion']:
+    
+    # CRITICAL FIX: Only process if emotion_data exists
+    if emotion_data and emotion_data.get('emotion'):
+        emotion = emotion_data['emotion']
+        confidence = emotion_data['confidence']
+        
+        # Get emotion color
+        emotion_color = get_emotion_color(emotion)
+        
         # Display detected emotion
-        emotion_color = get_emotion_color(emotion_data['emotion'])
-        render_emotion_display(
-            emotion_data['emotion'],
-            emotion_data['confidence'],
-            emotion_color
-        )
-
+        render_emotion_display(emotion, confidence, emotion_color)
+        
+        # LOG EMOTION TO DATABASE - CRITICAL FIX
+        if current_user:
+            try:
+                from database.database import db_manager
+                
+                # Get emotion object from database
+                emotion_obj = db_manager.get_emotion_by_name(emotion)
+                
+                if emotion_obj:
+                    # Create emotion log entry
+                    emotion_log = db_manager.create_emotion_log(
+                        user_id=current_user.id,
+                        emotion_id=emotion_obj.id,
+                        input_text=emotion_data.get('input_text', ''),
+                        input_type=emotion_data.get('input_type', 'text'),
+                        confidence_score=confidence
+                    )
+                    
+                    if emotion_log:
+                        logger.info(f"✅ Logged emotion: {emotion} for user {current_user.id}")
+                    else:
+                        logger.warning(f"⚠️ Failed to log emotion to database")
+                else:
+                    logger.warning(f"⚠️ Emotion '{emotion}' not found in database")
+                    
+            except Exception as e:
+                logger.error(f"❌ Error logging emotion: {e}")
+                st.warning("Emotion detected but not saved to history")
+        
         # Show motivational quote
         try:
             from api.quote_api import quote_manager
-            quote = quote_manager.get_quote_for_emotion(emotion_data['emotion'])
-            render_quote_card(quote)
-        except:
-            pass
-
-        # Get songs for the emotion
-        st.subheader(f"🎵 Songs for your {emotion_data['emotion']} mood")
-
-        songs = []
-        try:
-            import spotipy
-            from spotipy.oauth2 import SpotifyClientCredentials
-            import os
-
-            # Create Spotify client
-            client_credentials_manager = SpotifyClientCredentials(
-                client_id=os.getenv('SPOTIFY_CLIENT_ID'),
-                client_secret=os.getenv('SPOTIFY_CLIENT_SECRET')
-            )
-            sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-
-            # Emotion to search query mapping
-            emotion_queries = {
-                'happy': 'happy upbeat positive',
-                'sad': 'sad melancholy emotional',
-                'angry': 'angry aggressive intense',
-                'excited': 'excited energetic party',
-                'calm': 'calm peaceful relaxing',
-                'anxious': 'anxious tense',
-                'romantic': 'romantic love',
-                'energetic': 'energetic upbeat',
-                'melancholic': 'melancholic nostalgic',
-                'confident': 'confident empowering'
-            }
-
-            query = emotion_queries.get(emotion_data['emotion'].lower(), emotion_data['emotion'])
-            results = sp.search(q=query, type='track', limit=10)
-
-            # Convert to our song format
-            for track in results['tracks']['items']:
-                songs.append({
-                    'title': track['name'],
-                    'artist': ', '.join([artist['name'] for artist in track['artists']]),
-                    'spotify_id': track['id'],
-                    'album_image': track['album']['images'][0]['url'] if track['album']['images'] else None,
-                    'external_url': track['external_urls']['spotify']
-                })
-
+            quote = quote_manager.get_quote_for_emotion(emotion)
+            if quote:
+                render_quote_card(quote)
         except Exception as e:
-            logger.error(f"Spotify search error: {e}")
-            songs = []
-
-        # Display songs or fallback
-        if songs:
-            for index, song in enumerate(songs):
-                col1, col2 = st.columns([1, 3])
-
-                with col1:
-                    if song.get('album_image'):
-                        st.image(song['album_image'], width=120)
-
-                with col2:
-                    st.markdown(f"**{song['title']}**")
-                    st.write(f"by {song['artist']}")
-
-                    # Spotify embed player
-                    if song.get('spotify_id'):
-                        import streamlit.components.v1 as components
-                        components.html(f"""
-                            <iframe 
-                                style="border-radius:12px" 
-                                src="https://open.spotify.com/embed/track/{song['spotify_id']}" 
-                                width="100%" 
-                                height="152" 
-                                frameborder="0" 
-                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-                            </iframe>
-                        """, height=170)
-
-                    # Action buttons
-                    col_like, col_dislike, col_open = st.columns(3)
-
-                    with col_like:
-                        if st.button("👍 Like", key=f"like_{index}"):
-                            st.success("Liked!")
-
-                    with col_dislike:
-                        if st.button("👎 Skip", key=f"skip_{index}"):
-                            st.info("Skipped!")
-
-                    with col_open:
-                        if song.get('external_url'):
-                            st.markdown(f"[🎧 Open in Spotify]({song['external_url']})")
-
-                    st.markdown("---")
-        else:
-            st.info("No songs found for this emotion. Try a different mood!")
-
-    # else:
-    #     # If no emotion detected, use sample fallback
-    #     st.info("Using sample songs. Connect Spotify for real recommendations!")
-    #     sample_songs = get_sample_songs_for_emotion(emotion_data['emotion'] if emotion_data else 'neutral')
-
-    #     if sample_songs:
-    #         for index, song in enumerate(sample_songs):
-    #             def handle_like(song_data, idx=index):
-    #                 st.success(f"👍 Glad you liked {song_data['title']}!")
-
-    #             def handle_dislike(song_data, idx=index):
-    #                 st.info(f"👎 Thanks for the feedback on {song_data['title']}!")
-
-    #             render_song_card(
-    #                 song,
-    #                 emotion_color if emotion_data else "#667eea",
-    #                 current_user.id if current_user else 'guest',
-    #                 on_like=lambda s, i=index: handle_like(s, i),
-    #                 on_dislike=lambda s, i=index: handle_dislike(s, i),
-    #                 card_index=index
-    #             )
-    # else:
-    #         st.info("No songs found for this emotion. Try again!")
+            logger.warning(f"Could not load quote: {e}")
+        
+        # Get and display songs
+        st.subheader(f"🎵 Songs for your {emotion} mood")
+        
+        try:
+            # Import from app.py
+            from app import search_songs_by_emotion
+            
+            # Search songs
+            with st.spinner("🎵 Finding perfect songs for your mood..."):
+                songs = search_songs_by_emotion(emotion, limit=10)
+            
+            if songs:
+                st.success(f"Found {len(songs)} songs for your {emotion} mood!")
+                
+                for index, song in enumerate(songs):
+                    # Create container for each song
+                    with st.container():
+                        col1, col2 = st.columns([1, 3])
+                        
+                        with col1:
+                            if song.get('album_image'):
+                                st.image(song['album_image'], width=120)
+                            else:
+                                st.write("🎵")
+                        
+                        with col2:
+                            st.markdown(f"### {song['title']}")
+                            st.write(f"**Artist:** {song['artist']}")
+                            st.write(f"**Album:** {song.get('album', 'Unknown')}")
+                            
+                            # Spotify embed player
+                            if song.get('spotify_id'):
+                                render_spotify_embed(song['spotify_id'])
+                            
+                            # Action buttons
+                            col_like, col_dislike, col_open, col_save = st.columns(4)
+                            
+                            with col_like:
+                                if st.button("👍 Like", key=f"like_{index}_{song['spotify_id']}"):
+                                    # Log song interaction
+                                    if current_user and emotion_obj:
+                                        try:
+                                            # Add song to database
+                                            db_song = db_manager.add_or_get_song(
+                                                title=song['title'],
+                                                artist=song['artist'],
+                                                spotify_id=song.get('spotify_id'),
+                                                preview_url=song.get('preview_url'),
+                                                external_url=song.get('external_url'),
+                                                album_image=song.get('album_image'),
+                                                duration_ms=song.get('duration_ms'),
+                                                popularity=song.get('popularity')
+                                            )
+                                            
+                                            if db_song:
+                                                # Log the interaction
+                                                db_manager.log_song_interaction(
+                                                    user_id=current_user.id,
+                                                    song_id=db_song.id,
+                                                    emotion_id=emotion_obj.id,
+                                                    input_type=emotion_data.get('input_type', 'text'),
+                                                    confidence_score=confidence,
+                                                    liked=True
+                                                )
+                                                st.success("❤️ Liked!")
+                                        except Exception as e:
+                                            logger.error(f"Error logging like: {e}")
+                                            st.success("👍 Liked!")
+                                    else:
+                                        st.success("👍 Liked!")
+                            
+                            with col_dislike:
+                                if st.button("👎 Skip", key=f"skip_{index}_{song['spotify_id']}"):
+                                    # Log song interaction as disliked
+                                    if current_user and emotion_obj:
+                                        try:
+                                            db_song = db_manager.add_or_get_song(
+                                                title=song['title'],
+                                                artist=song['artist'],
+                                                spotify_id=song.get('spotify_id'),
+                                                preview_url=song.get('preview_url'),
+                                                external_url=song.get('external_url'),
+                                                album_image=song.get('album_image'),
+                                                duration_ms=song.get('duration_ms'),
+                                                popularity=song.get('popularity')
+                                            )
+                                            
+                                            if db_song:
+                                                db_manager.log_song_interaction(
+                                                    user_id=current_user.id,
+                                                    song_id=db_song.id,
+                                                    emotion_id=emotion_obj.id,
+                                                    input_type=emotion_data.get('input_type', 'text'),
+                                                    confidence_score=confidence,
+                                                    liked=False
+                                                )
+                                                st.info("👎 Skipped!")
+                                        except Exception as e:
+                                            logger.error(f"Error logging skip: {e}")
+                                            st.info("👎 Skipped!")
+                                    else:
+                                        st.info("👎 Skipped!")
+                            
+                            with col_open:
+                                if song.get('external_url'):
+                                    st.markdown(f"[🎧 Open in Spotify]({song['external_url']})")
+                            
+                            with col_save:
+                                if st.button("➕ Save", key=f"save_{index}_{song['spotify_id']}"):
+                                    st.success("💾 Saved!")
+                        
+                        st.markdown("---")
+            else:
+                st.info("No songs found. Try a different emotion!")
+                
+        except Exception as e:
+            logger.error(f"Error loading songs: {e}")
+            st.error("Could not load songs. Please try again.")
+    else:
+        # Show placeholder when no emotion detected yet
+        st.info("👆 Enter how you're feeling above to get personalized music recommendations!")
 
 
 def render_profile_page():
-    """Render user profile page with analytics"""
+    """Render user profile page with analytics - FIXED VERSION"""
     st.markdown("""
     <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
                 padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
@@ -236,128 +273,192 @@ def render_profile_page():
     """, unsafe_allow_html=True)
     
     current_user = auth_manager.get_current_user()
-    if current_user:
-        # Profile header
-        st.markdown(f"""
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                    color: white; padding: 2rem; border-radius: 15px; text-align: center; margin-bottom: 2rem;">
-            <h2>👤 {current_user.username}</h2>
-            <p>Member since {current_user.created_at.strftime("%B %Y")}</p>
-        </div>
-        """, unsafe_allow_html=True)
+    
+    if not current_user:
+        st.error("Please log in to view your profile.")
+        return
+    
+    # Profile header
+    st.markdown(f"""
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                color: white; padding: 2rem; border-radius: 15px; text-align: center; margin-bottom: 2rem;">
+        <h2>👤 {current_user.username}</h2>
+        <p>Member since {current_user.created_at.strftime("%B %Y")}</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # User statistics
+    st.subheader("📊 Your Statistics")
+    
+    try:
+        from database.database import db_manager
         
-        # User statistics
-        try:
-            render_user_stats(current_user.id)
-        except Exception as e:
-            logger.error(f"Error rendering user stats: {e}")
-            st.info("Statistics will appear here as you use the app!")
+        # Get emotion history
+        emotion_history = db_manager.get_user_emotion_history(current_user.id, days=30)
+        
+        # Get song history
+        song_history = db_manager.get_user_song_history(current_user.id, limit=100)
+        
+        # Calculate stats
+        total_emotions = len(emotion_history) if emotion_history else 0
+        total_songs = len(song_history) if song_history else 0
+        liked_songs = len([s for s in song_history if hasattr(s, 'liked') and s.liked == True]) if song_history else 0
+        
+        # Get unique emotions
+        unique_emotions = set()
+        if emotion_history:
+            for entry in emotion_history:
+                emotion_name = getattr(entry, 'name', None)
+                if emotion_name:
+                    unique_emotions.add(emotion_name)
+        
+        # Display stats
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.metric("🎭 Emotions Detected", total_emotions)
+        
+        with col2:
+            st.metric("🎵 Songs Played", total_songs)
+        
+        with col3:
+            st.metric("❤️ Songs Liked", liked_songs)
+        
+        with col4:
+            st.metric("🌈 Unique Emotions", len(unique_emotions))
+        
+        st.markdown("---")
         
         # Charts section
-        try:
-            from database.database import db_manager
-            
+        if total_emotions > 0:
             col1, col2 = st.columns(2)
             
             with col1:
                 st.subheader("📈 Emotion Timeline")
-                emotion_history = db_manager.get_user_emotion_history(current_user.id, days=30)
-                if emotion_history:
-                    render_emotion_history_chart(emotion_history)
-                else:
-                    st.info("Start using emotion detection to see your timeline!")
+                render_emotion_history_chart(emotion_history)
             
             with col2:
                 st.subheader("🎭 Mood Distribution")
-                if emotion_history:
-                    render_mood_distribution_chart(emotion_history)
-                else:
-                    st.info("Your mood distribution will appear here!")
-        except Exception as e:
-            logger.error(f"Error rendering charts: {e}")
+                render_mood_distribution_chart(emotion_history)
+        else:
+            st.info("🎭 No emotion data yet! Start by detecting your emotions on the Home page.")
+        
+        st.markdown("---")
         
         # Recent activity
-        st.subheader("🎵 Recent Songs")
-        try:
-            from database.database import db_manager
-            song_history = db_manager.get_user_song_history(current_user.id, limit=20)
-            
-            if song_history:
-                for entry in song_history:
-                    col1, col2, col3, col4 = st.columns([3, 2, 2, 1])
+        st.subheader("🎵 Recent Activity")
+        
+        if total_songs > 0:
+            # Display recent songs
+            for i, entry in enumerate(list(song_history)[:10]):  # Show last 10
+                col1, col2, col3, col4 = st.columns([3, 2, 2, 1])
+                
+                with col1:
+                    st.write(f"**{entry.title}** by {entry.artist}")
+                
+                with col2:
+                    # Get emotion color
+                    emotion_color = getattr(entry, 'color_code', '#667eea')
+                    emotion_name = getattr(entry, 'emotion', 'Unknown')
                     
-                    with col1:
-                        st.write(f"**{entry.title}** by {entry.artist}")
-                    
-                    with col2:
-                        emotion_color = entry.color_code
-                        st.markdown(f"""
-                        <span style="background-color: {emotion_color}; color: white; 
-                                   padding: 0.25rem 0.5rem; border-radius: 15px; font-size: 0.8rem;">
-                            {entry.emotion}
-                        </span>
-                        """, unsafe_allow_html=True)
-                    
-                    with col3:
-                        st.write(entry.played_at.strftime("%m/%d %H:%M"))
-                    
-                    with col4:
-                        if entry.liked == True:
-                            st.write("👍")
-                        elif entry.liked == False:
-                            st.write("👎")
-                        else:
-                            st.write("—")
-                    
-                    st.markdown("---")
-            else:
-                st.info("No song history available yet. Start by detecting your emotions!")
-        except Exception as e:
-            logger.error(f"Error rendering song history: {e}")
-            st.info("Song history will appear here as you use the app!")
-    else:
-        st.error("Please log in to view your profile.")
+                    st.markdown(f"""
+                    <span style="background-color: {emotion_color}; color: white; 
+                               padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.85rem;">
+                        {emotion_name}
+                    </span>
+                    """, unsafe_allow_html=True)
+                
+                with col3:
+                    played_at = getattr(entry, 'played_at', datetime.now())
+                    st.write(played_at.strftime("%m/%d %H:%M"))
+                
+                with col4:
+                    liked = getattr(entry, 'liked', None)
+                    if liked == True:
+                        st.write("❤️")
+                    elif liked == False:
+                        st.write("👎")
+                    else:
+                        st.write("—")
+                
+                st.markdown("---")
+        else:
+            st.info("🎵 No songs played yet! Detect your emotion and play some music.")
+        
+    except Exception as e:
+        logger.error(f"Error loading profile data: {e}")
+        st.error(f"Error loading profile data: {str(e)}")
+        st.info("Please try refreshing the page.")
+
+
+# ============================================================================
+# ADDITIONAL FIX: Add this to ui/components.py if not present
+# ============================================================================
+
+def render_spotify_embed(spotify_id):
+    """
+    Render Spotify embed player
+    Add this to ui/components.py if missing
+    """
+    if not spotify_id:
+        st.warning("No Spotify ID available")
+        return
+    
+    embed_url = f"https://open.spotify.com/embed/track/{spotify_id}?utm_source=generator"
+    
+    st.markdown(f"""
+    <iframe 
+        style="border-radius:12px" 
+        src="{embed_url}" 
+        width="100%" 
+        height="152" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+    </iframe>
+    """, unsafe_allow_html=True)
 
 def render_playlists_page():
-    """Render playlists page"""
-    st.markdown("""
-    <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
-                padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
-        <h1 style="color: white; margin: 0; font-size: 2.5rem; font-weight: 300;">🎵 Playlists</h1>
-        <p style="color: rgba(255, 255, 255, 0.8); margin: 0.5rem 0 0 0; font-size: 1.1rem;">
-            Emotion-Based Music Collections
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    # """Render playlists page"""
+    # st.markdown("""
+    # <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
+    #             padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
+    #     <h1 style="color: white; margin: 0; font-size: 2.5rem; font-weight: 300;">🎵 Playlists</h1>
+    #     <p style="color: rgba(255, 255, 255, 0.8); margin: 0.5rem 0 0 0; font-size: 1.1rem;">
+    #         Emotion-Based Music Collections
+    #     </p>
+    # </div>
+    # """, unsafe_allow_html=True)
     
-    st.subheader("🎵 Emotion-Based Playlists")
+    # st.subheader("🎵 Emotion-Based Playlists")
     
-    # Define emotions with colors and emojis
-    emotions = [
-        ('happy', '#FFD700', '😊'),
-        ('sad', '#4169E1', '😢'),
-        ('angry', '#FF4500', '😠'),
-        ('excited', '#FF69B4', '🎉'),
-        ('calm', '#98FB98', '😌'),
-        ('anxious', '#DDA0DD', '😰'),
-        ('romantic', '#FF1493', '💕'),
-        ('energetic', '#FF8C00', '⚡'),
-        ('melancholic', '#708090', '🌧️'),
-        ('confident', '#DC143C', '💪')
-    ]
+    # # Define emotions with colors and emojis
+    # emotions = [
+    #     ('happy', '#FFD700', '😊'),
+    #     ('sad', '#4169E1', '😢'),
+    #     ('angry', '#FF4500', '😠'),
+    #     ('excited', '#FF69B4', '🎉'),
+    #     ('calm', '#98FB98', '😌'),
+    #     ('anxious', '#DDA0DD', '😰'),
+    #     ('romantic', '#FF1493', '💕'),
+    #     ('energetic', '#FF8C00', '⚡'),
+    #     ('melancholic', '#708090', '🌧️'),
+    #     ('confident', '#DC143C', '💪')
+    # ]
     
-    for emotion, color, emoji in emotions:
-        with st.expander(f"{emoji} {emotion.title()} Playlist"):
-            st.markdown(f"""
-            <div style="background: {color}20; padding: 1rem; border-radius: 10px; 
-                        border-left: 4px solid {color}; margin: 1rem 0;">
-                <h4 style="color: {color};">{emoji} {emotion.title()} Vibes</h4>
-                <p>Songs that match your {emotion} mood</p>
-            </div>
-            """, unsafe_allow_html=True)
+    # for emotion, color, emoji in emotions:
+    #     with st.expander(f"{emoji} {emotion.title()} Playlist"):
+    #         st.markdown(f"""
+    #         <div style="background: {color}20; padding: 1rem; border-radius: 10px; 
+    #                     border-left: 4px solid {color}; margin: 1rem 0;">
+    #             <h4 style="color: {color};">{emoji} {emotion.title()} Vibes</h4>
+    #             <p>Songs that match your {emotion} mood</p>
+    #         </div>
+    #         """, unsafe_allow_html=True)
             
-            # Get sample songs for this emotion
-            songs = get_sample_songs_for_emotion(emotion)
+    #         # Get sample songs for this emotion
+    #         songs = get_sample_songs_for_emotion(emotion)
     st.markdown("""
     <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); 
                 padding: 2rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
